@@ -1,0 +1,25 @@
+{
+    "name": "kallbuloso/cadastros",
+    "description": "",
+    "authors": [
+        {
+            "name": "Amaral karl",
+            "email": "kallbuloso@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Cadastros\\Providers\\CadastrosServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Cadastros\\": ""
+        }
+    }
+}

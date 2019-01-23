@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!--[if lte IE 9]>         <html lang="{{ config('cb.lang') }}" class="lt-ie10 lt-ie10-msg no-focus"> <![endif]-->
-<!--[if gt IE 9]><!--> <html lang="{{ config('cb.lang') }}" class="no-focus"> <!--<![endif]-->
-<html lang="{{ config('cb.lang') }}">
+<!--[if lte IE 9]>         <html lang="{{ str_replace('-', '_', app()->getLocale()) }}" class="lt-ie10 lt-ie10-msg no-focus"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="{{ str_replace('-', '_', app()->getLocale()) }}" class="no-focus"> <!--<![endif]-->
+<html lang="{{ str_replace('-', '_', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">

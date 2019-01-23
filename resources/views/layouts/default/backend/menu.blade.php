@@ -4,7 +4,7 @@
         <span class="sidebar-mini-hide">Dashboard</span>
     </a>
 </li>
-@include('blog::layouts.menu')
+{{--  @include('blog::layouts.menu')  --}}
 <li>
     <a href="">
         <i class="si si-docs"></i>

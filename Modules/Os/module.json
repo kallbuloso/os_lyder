@@ -1,0 +1,14 @@
+{
+    "name": "Os",
+    "alias": "os",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Os\\Providers\\OsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

@@ -26,7 +26,7 @@
 
                     <!-- Logo -->
                     <div class="content-header-item">
-                        <a class="link-effect font-w700" href="">
+                        <a class="link-effect font-w700" href="/">
                             @include('layouts.default.logo')
                         </a>
                     </div>

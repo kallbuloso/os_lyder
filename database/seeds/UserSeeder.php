@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
         $user = new \App\Models\User();
         $date = Carbon::create(2018, 7, 18, 9);
         $faker =  Faker::create('pt_BR');
-        $qntd = '20';
+        $qntd = '30';
 
         $user->create([
             'cnpj_cpf' => 30780630890,

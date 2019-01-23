@@ -15,6 +15,8 @@ class CreateAddressesTable extends Migration
     {
         Schema::create('addresses', function (Blueprint $table) {
             $table->increments('id');
+            // $table->integer('acount_id');
+            // $table->string('table');        // tabela [fornecedor, cliente, funcionário, fabricante]
             $table->string('address');
             $table->string('neighborhood');
             $table->string('city');
@@ -22,6 +24,7 @@ class CreateAddressesTable extends Migration
             $table->string('number')->nullable();
             $table->integer('zipcode');
             $table->string('complement');
+            $table->string('type');         // residencial, comercial, cobrança
             $table->timestamps();
         });
     }
@@ -33,6 +36,6 @@ class CreateAddressesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('adrresses');
+        Schema::dropIfExists('addresses');
     }
 }

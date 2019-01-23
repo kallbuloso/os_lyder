@@ -1,0 +1,25 @@
+{
+    "name": "kallbuloso/admin",
+    "description": "",
+    "authors": [
+        {
+            "name": "Amaral karl",
+            "email": "kallbuloso@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Admin\\Providers\\AdminServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Admin\\": ""
+        }
+    }
+}

@@ -58,7 +58,7 @@
 
             <!-- Right Section -->
             <div class="content-header-section">
-                <!-- User Dropdown -->
+                <!-- User Dropdown -->                                    
                 <div class="btn-group" role="group">
                     <button type="button" class="btn btn-rounded btn-dual-secondary" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{ Auth::user()->name }}<i class="fa fa-angle-down ml-5"></i>
@@ -98,7 +98,7 @@
                             @csrf
                         </form>
                     </div>
-                </div>
+                </div>                
                 <!-- END User Dropdown -->
 
                 <!-- Toggle Side Overlay -->
