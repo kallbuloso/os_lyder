@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Client extends Model
 {
     protected $fillable = [
-        'type',
+        'person',
         'name',
         'nik_name',
         'contact',
@@ -19,10 +19,23 @@ class Client extends Model
         'gender',
         'email',
         'site',
-        'password',
         'notice',
+        'last_purchase',
         'status',
         'attended_by',
         'last_updated_by',
     ];
+    
+    /**
+     * Scope a query to only include Cliente
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeClients($query)
+    {
+       return $query->whereMonth('created_at', '=', date('m'))
+                    ->where('status', 1);
+    }
+
 }

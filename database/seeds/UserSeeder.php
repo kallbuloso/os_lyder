@@ -81,7 +81,7 @@ class UserSeeder extends Seeder
                 'number' => $faker->buildingNumber,
                 'zipcode' => $faker->postcode,
                 'complement' => $faker->secondaryAddress,
-                'email' => $faker->email,
+                'email' => rand(0, $qntd).$faker->email,
                 'email_verified_at' => $date,
                 'site' => $faker->url,
                 'status' => $faker->boolean,

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use Modules\Cadastros\Models\Client;
+use  Modules\Cadastros\Http\Requests\ClientRequest;
 
 class ClientsController extends Controller
 {
@@ -15,8 +16,18 @@ class ClientsController extends Controller
      */
     public function index()
     {
-        $clients = Client::all();
-        return view('cadastros::clients.index', compact('clients'));
+        // return Client::where('id', 1030)->get();
+        return view('cadastros::clients.index', [
+            // 'client' => Client::where('id', 10)->get(),
+            'persons' => Client::clients()->get(),
+            'title'=>'Clientes',
+            'titleDetails'=>'Welcome to your custom panel!',
+            'create'=>'client.create',
+            'show'=>'client.show',
+            'edit'=>'client.edit',
+            'destroy'=>'client.destroy',
+            'btnAddPerson'=>'Adicionar Novo Cliente',
+            ]);
     }
 
     /**
@@ -33,8 +44,9 @@ class ClientsController extends Controller
      * @param  Request $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store(ClientRequest $request, Client $client)
     {
+        return dd($request->all());
     }
 
     /**

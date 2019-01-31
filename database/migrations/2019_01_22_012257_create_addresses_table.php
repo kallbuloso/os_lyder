@@ -15,16 +15,17 @@ class CreateAddressesTable extends Migration
     {
         Schema::create('addresses', function (Blueprint $table) {
             $table->increments('id');
-            // $table->integer('acount_id');
-            // $table->string('table');        // tabela [fornecedor, cliente, funcionário, fabricante]
+            $table->integer('person_id');
+            $table->integer('type_address');            // 0 = residencial, 1 = comercial, 2 = correspondência
+            // $table->string('table');         // tabela [fornecedor, cliente, funcionário, fabricante]
+            $table->integer('zipcode');
             $table->string('address');
-            $table->string('neighborhood');
+            $table->string('number')->nullable();
+            $table->string('district');
             $table->string('city');
             $table->string('state');
-            $table->string('number')->nullable();
-            $table->integer('zipcode');
             $table->string('complement');
-            $table->string('type');         // residencial, comercial, cobrança
+            
             $table->timestamps();
         });
     }

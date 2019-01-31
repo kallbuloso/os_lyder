@@ -31,7 +31,7 @@ class ClientsTableSeeder extends Seeder
                 'phone' => $faker->areaCode . $faker->phone(false),
                 'celphone' => $faker->areaCode . $faker->cellphone(false),
                 'gender' => rand(0,2),
-                'email'=>$faker->email,
+                'email'=>rand(0, $qntd).$faker->email,
                 'site'=>$faker->url,
                 'notice'=>$faker->sentence($nbWords = 6, $variableNbWords = true),
                 'status'=>$faker->boolean,

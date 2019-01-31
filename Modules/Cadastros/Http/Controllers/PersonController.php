@@ -7,7 +7,7 @@ use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use Modules\Cadastros\Models\Person;
 
-class ProvidersController extends Controller
+class PersonController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,14 +16,14 @@ class ProvidersController extends Controller
     public function index()
     {
         return view('cadastros::clients.index', [
-            'persons' => Person::provider()->get(),
-            'title'=>'Fornecedores',
+            'persons' => Person::person()->get(),
+            'title'=>'Colaboradores',
             'titleDetails'=>'Welcome to your custom panel!',
-            'create'=>'provider.create',
-            'show'=>'provider.show',
-            'edit'=>'provider.edit',
-            'destroy'=>'provider.destroy',
-            'btnAddPerson'=>'Adicionar Novo fornecedor',
+            'create'=>'person.create',
+            'show'=>'person.show',
+            'edit'=>'person.edit',
+            'destroy'=>'person.destroy',
+            'btnAddPerson'=>'Adicionar Novo Colaborador',
             ]);
     }
 
